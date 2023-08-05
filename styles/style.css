@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+
+/* font-family: 'Nunito', sans-serif; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  min-height: 100vw;
+  background-size: cover;
+  background-color: aquamarine;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 36px;
+  padding: 5px 20px;
+  text-align: center;
+}
+
+.box {
+  min-width: 400px;
+  height: 500px;
+  background: darkgray;
+  border-radius: 40px;
+  text-align: center;
+  position: relative;
+  padding: 40px 0;
+}
+
+.input label {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+/* .input {
+  background: #fff;
+  box-shadow: 0px 0px 0px 0px #fff;
+  border-radius: 5px;
+  padding: 20px 0;
+  margin-bottom: 20px;
+} */
+
+.input input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #4f7df9;
+  width: 60%;
+  text-align: center;
+  font-size: 28px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.calculate,
+.reset {
+  font-family: 'Nunito', sans-serif;
+  color: #fff;
+  background-color: #4f7df9;
+  font-size: 16px;
+  border-radius: 12px;
+  padding: 10px 0;
+  width: 50%;
+  outline: none;
+  border: none;
+  margin-top: 2rem;
+  transition: all 0.3s ease;
+}
+
+.calculate:hover,
+.reset:hover {
+  background: #04f;
+  cursor: pointer;
+}
+
+.result {
+  padding: 30px 20px;
+}
+
+.result p {
+  font-weight: 600;
+  font-size: 20px;
+  color: #000;
+  margin-bottom: 9px;
+}
+
+.result #bmi {
+  font-weight: 800;
+  font-size: 20px;
+  color: #4f7df9;
+  background-color: #eaeaea;
+  display: inline-block;
+  padding: 7px 20px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.status {
+  font-weight: 600;
+  color: #4f7df9;
+}
+
+.error {
+  color: red;
+}
