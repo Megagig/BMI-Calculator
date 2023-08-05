@@ -17,7 +17,8 @@ calButton.addEventListener('click', (e) => {
     }, 5000);
 
     return;
-  } else if (!Number(heightValue) || !Number(weightValue)) {
+  }
+  if (!Number(heightValue) || !Number(weightValue)) {
     errorEl.textContent = 'Please enter a valid number';
     setTimeout(() => {
       errorEl.textContent = '';
@@ -27,7 +28,7 @@ calButton.addEventListener('click', (e) => {
 
   let bmi = weightValue / (heightValue / 100) ** 2;
   bmi = bmi.toFixed(2);
-  resultEl.textContent = bmi; //whats the diff bw innerHTML & textContent?
+  resultEl.textContent = bmi; // whats the diff bw innerHTML & textContent?
   let status = '';
   if (bmi < 18.5) {
     status = 'Underweight';
@@ -50,9 +51,13 @@ const resetBtn = () => {
     e.preventDefault();
     height.value = '';
     weight.value = '';
+    resultEl.textContent = '0.00';
   });
 };
+resetBtn();
 
-//Explanation of the above code:
-// This code defines a function resetBtn that adds an event listener to the reset button. This event listener calls the reset function. The reset function resets the values of the height and weight input fields to an empty string.
+// Explanation of the above code:
+// This code defines a function resetBtn that adds an event listener to the reset button.
+// This event listener calls the reset function.
+// The reset function resets the values of the height and weight input fields to an empty string.
 // I need to implement the localStorage
